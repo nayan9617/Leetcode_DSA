@@ -31,6 +31,7 @@ public:
                 hseq.first = i;
                 hseq.second = j;
             }
+            i = j;
         }
 
         // start and end index of longest sequence in vBars
@@ -44,6 +45,7 @@ public:
                 vseq.first = i;
                 vseq.second = j;
             }
+            i = j;
         }
 
         int maxLen = min(hseq.second - hseq.first + 2, vseq.second - vseq.first + 2);
