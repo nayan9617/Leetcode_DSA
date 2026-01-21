@@ -20,7 +20,7 @@ public:
             temp.push_back(to_string(nums[i]));
         }
 
-        //this is the custom sort comparator with lemda function
+        //this is the custom sort comparator with lambda function
         //  --what it does is it take 2 strings and check if a+b > b+a returns true then a come before else swap the order!
         sort(temp.begin(), temp.end(), [](string a, string b){
             return a + b > b + a;
