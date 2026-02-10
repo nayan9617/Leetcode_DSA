@@ -4,6 +4,9 @@ A subarray is called balanced if the number of distinct even numbers in the suba
 
 Return the length of the longest balanced subarray.*/
 
+
+
+
 class Solution {
 public:
     int longestBalanced(vector<int>& nums) {
