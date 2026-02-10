@@ -14,3 +14,23 @@ Explanation:
 The pivot index is 3.
 Left sum = nums[0] + nums[1] + nums[2] = 1 + 7 + 3 = 11
 Right sum = nums[4] + nums[5] = 5 + 6 = 11*/
+
+class Solution {
+public:
+    int pivotIndex(vector<int>& nums) {
+        int n = nums.size();
+        int leftsum = 0;
+        int totalsum = 0;
+        for(int num : nums){
+            totalsum += num;
+        }
+        for(int i = 0; i < n; i++){
+            if(i > 0){
+                leftsum += nums[i-1];
+            }
+            int rightsum = totalsum - leftsum-nums[i];
+            if(rightsum == leftsum) return i;
+        }
+        return -1;
+    }
+};
